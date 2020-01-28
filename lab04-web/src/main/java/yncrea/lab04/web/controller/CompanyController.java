@@ -2,9 +2,7 @@ package yncrea.lab04.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import yncrea.lab04.core.entity.Company;
 import yncrea.lab04.core.service.CompanyService;
 
@@ -22,7 +20,7 @@ public class CompanyController {
         modelMap.put("companies", companyService.findAllWithProjects());
         return "companiesList";
     }
-}
+
     @RequestMapping(value = "/form")
     public String getForm(ModelMap modelMap) {
         modelMap.addAttribute("company", new Company());
@@ -34,4 +32,4 @@ public class CompanyController {
         companyService.save(company);
         return "redirect:list";
     }
-
+}
