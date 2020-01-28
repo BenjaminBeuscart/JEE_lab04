@@ -14,14 +14,12 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
         configClasses[1] = DBConfig.class;
         return configClasses;
     }
-
     @Override
     protected Class<?>[] getServletConfigClasses() {
         Class[] servletConfigClasses = new Class[1];
         servletConfigClasses[0] = WebConfig.class;
         return servletConfigClasses;
     }
-
     @Override
     protected String[] getServletMappings() {
         String[] servletMappings = new String[1];
