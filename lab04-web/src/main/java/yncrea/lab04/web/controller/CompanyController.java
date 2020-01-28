@@ -34,3 +34,4 @@ public class CompanyController {
         companyService.save(company);
         return "redirect:list";
     }
+
